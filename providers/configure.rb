@@ -236,7 +236,8 @@ def configure
           :clusterenabled             => current['clusterenabled'],
           :clusterconfigfile          => current['clusterconfigfile'],
           :clusternodetimeout         => current['clusternodetimeout'],
-          :includes                   => current['includes']
+          :includes                   => current['includes'],
+          :slavereadonly              => current['slavereadonly']
         })
         not_if do ::File.exists?("#{current['datadir']}/#{server_name}.conf.breadcrumb") end
       end

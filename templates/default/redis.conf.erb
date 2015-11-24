@@ -713,3 +713,7 @@ cluster-node-timeout <%= @clusternodetimeout %>
     <%= "include #{include_option}" %>
   <% end %>
 <% end %>
+
+<%if @slavereadonly == 'no'%>
+slave-read-only no
+<%end%>
